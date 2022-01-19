@@ -1,4 +1,4 @@
 FROM scratch
-COPY ficsit-smm-launcher /
+COPY ficsit-smm-switcher /
 EXPOSE 8080
-ENTRYPOINT ["/ficsit-smm-launcher"]
+ENTRYPOINT ["/ficsit-smm-switcher"]
