@@ -1,0 +1,44 @@
+before:
+  hooks:
+    - go mod download
+
+builds:
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+    goarch:
+      - amd64
+    binary: api
+    main: ./cmd/api/serve.go
+
+archives:
+  - replacements:
+      linux: Linux
+      amd64: x86_64
+
+checksum:
+  name_template: 'checksums.txt'
+
+snapshot:
+  name_template: "{{ .Tag }}-next"
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'
+
+dockers:
+  - image_templates:
+      - "ghcr.io/vilsol/ficsit-smm-switcher:{{ .Tag }}"
+      - "ghcr.io/vilsol/ficsit-smm-switcher:v{{ .Major }}"
+      - "ghcr.io/vilsol/ficsit-smm-switcher:v{{ .Major }}.{{ .Minor }}"
+      - "ghcr.io/vilsol/ficsit-smm-switcher:latest"
+    build_flag_templates:
+      - "--pull"
+      - "--label=org.opencontainers.image.created={{.Date}}"
+      - "--label=org.opencontainers.image.title={{.ProjectName}}"
+      - "--label=org.opencontainers.image.revision={{.FullCommit}}"
+      - "--label=org.opencontainers.image.version={{.Version}}"
