@@ -30,10 +30,10 @@ changelog:
 
 dockers:
   - image_templates:
-      - "ghcr.io/vilsol/ficsit-smm-switcher:{{ .Tag }}"
-      - "ghcr.io/vilsol/ficsit-smm-switcher:v{{ .Major }}"
-      - "ghcr.io/vilsol/ficsit-smm-switcher:v{{ .Major }}.{{ .Minor }}"
-      - "ghcr.io/vilsol/ficsit-smm-switcher:latest"
+      - "ghcr.io/vilsol/ficsit-switcher:{{ .Tag }}"
+      - "ghcr.io/vilsol/ficsit-switcher:v{{ .Major }}"
+      - "ghcr.io/vilsol/ficsit-switcher:v{{ .Major }}.{{ .Minor }}"
+      - "ghcr.io/vilsol/ficsit-switcher:latest"
     build_flag_templates:
       - "--pull"
       - "--label=org.opencontainers.image.created={{.Date}}"
