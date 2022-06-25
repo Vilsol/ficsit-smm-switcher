@@ -22,10 +22,10 @@ https://smm.ficsit.app/:platform/:arch
 ### CLI
 
 ```
-https://smm.ficsit.app
-https://smm.ficsit.app/:platform
-https://smm.ficsit.app/:platform/:arch
-https://smm.ficsit.app/:platform/:arch/:packaging
+https://cli.ficsit.app
+https://cli.ficsit.app/:platform
+https://cli.ficsit.app/:platform/:arch
+https://cli.ficsit.app/:platform/:arch/:packaging
 ```
 
 <table>
@@ -38,78 +38,78 @@ https://smm.ficsit.app/:platform/:arch/:packaging
 
   <tr>
     <td rowspan="4"><strong>amd64</strong></td>
-    <td rowspan="4"><a href="https://smm.ficsit.app/windows/amd64/binary">binary</a></td>
-    <td rowspan="8"><a href="https://smm.ficsit.app/darwin/amd64/binary">binary</a></td>
-    <td><a href="https://smm.ficsit.app/linux/amd64/binary">binary</a></td>
+    <td rowspan="4"><a href="https://cli.ficsit.app/windows/amd64/binary">binary</a></td>
+    <td rowspan="8"><a href="https://cli.ficsit.app/darwin/amd64/binary">binary</a></td>
+    <td><a href="https://cli.ficsit.app/linux/amd64/binary">binary</a></td>
   </tr>
   <tr>
-    <td><a href="https://smm.ficsit.app/linux/amd64/deb">deb</a></td>
+    <td><a href="https://cli.ficsit.app/linux/amd64/deb">deb</a></td>
   </tr>
   <tr>
-    <td><a href="https://smm.ficsit.app/linux/amd64/rpm">rpm</a></td>
+    <td><a href="https://cli.ficsit.app/linux/amd64/rpm">rpm</a></td>
   </tr>
   <tr>
-    <td><a href="https://smm.ficsit.app/linux/amd64/apk">apk</a></td>
+    <td><a href="https://cli.ficsit.app/linux/amd64/apk">apk</a></td>
   </tr>
 
   <tr>
     <td rowspan="4"><strong>386</strong></td>
-    <td rowspan="4"><a href="https://smm.ficsit.app/windows/386/binary">binary</a></td>
-    <td><a href="https://smm.ficsit.app/linux/386/binary">binary</a></td>
+    <td rowspan="4"><a href="https://cli.ficsit.app/windows/386/binary">binary</a></td>
+    <td><a href="https://cli.ficsit.app/linux/386/binary">binary</a></td>
   </tr>
   <tr>
-    <td><a href="https://smm.ficsit.app/linux/386/deb">deb</a></td>
+    <td><a href="https://cli.ficsit.app/linux/386/deb">deb</a></td>
   </tr>
   <tr>
-    <td><a href="https://smm.ficsit.app/linux/386/rpm">rpm</a></td>
+    <td><a href="https://cli.ficsit.app/linux/386/rpm">rpm</a></td>
   </tr>
   <tr>
-    <td><a href="https://smm.ficsit.app/linux/386/apk">apk</a></td>
+    <td><a href="https://cli.ficsit.app/linux/386/apk">apk</a></td>
   </tr>
 
   <tr>
     <td rowspan="4"><strong>arm64</strong></td>
-    <td rowspan="4"><a href="https://smm.ficsit.app/windows/arm64/binary">binary</a></td>
+    <td rowspan="4"><a href="https://cli.ficsit.app/windows/arm64/binary">binary</a></td>
     <td rowspan="12"><i>n/a</i></td>
-    <td><a href="https://smm.ficsit.app/linux/arm64/binary">binary</a></td>
+    <td><a href="https://cli.ficsit.app/linux/arm64/binary">binary</a></td>
   </tr>
   <tr>
-    <td><a href="https://smm.ficsit.app/linux/arm64/deb">deb</a></td>
+    <td><a href="https://cli.ficsit.app/linux/arm64/deb">deb</a></td>
   </tr>
   <tr>
-    <td><a href="https://smm.ficsit.app/linux/arm64/rpm">rpm</a></td>
+    <td><a href="https://cli.ficsit.app/linux/arm64/rpm">rpm</a></td>
   </tr>
   <tr>
-    <td><a href="https://smm.ficsit.app/linux/arm64/apk">apk</a></td>
+    <td><a href="https://cli.ficsit.app/linux/arm64/apk">apk</a></td>
   </tr>
 
   <tr>
     <td rowspan="4"><strong>armv7</strong></td>
-    <td rowspan="4"><a href="https://smm.ficsit.app/windows/armv7/binary">binary</a></td>
-    <td><a href="https://smm.ficsit.app/linux/armv7/binary">binary</a></td>
+    <td rowspan="4"><a href="https://cli.ficsit.app/windows/armv7/binary">binary</a></td>
+    <td><a href="https://cli.ficsit.app/linux/armv7/binary">binary</a></td>
   </tr>
   <tr>
-    <td><a href="https://smm.ficsit.app/linux/armv7/deb">deb</a></td>
+    <td><a href="https://cli.ficsit.app/linux/armv7/deb">deb</a></td>
   </tr>
   <tr>
-    <td><a href="https://smm.ficsit.app/linux/armv7/rpm">rpm</a></td>
+    <td><a href="https://cli.ficsit.app/linux/armv7/rpm">rpm</a></td>
   </tr>
   <tr>
-    <td><a href="https://smm.ficsit.app/linux/armv7/apk">apk</a></td>
+    <td><a href="https://cli.ficsit.app/linux/armv7/apk">apk</a></td>
   </tr>
 
   <tr>
     <td rowspan="4"><strong>ppc64le</strong></td>
     <td rowspan="4"><i>n/a</i></td>
-    <td><a href="https://smm.ficsit.app/linux/ppc64le/binary">binary</a></td>
+    <td><a href="https://cli.ficsit.app/linux/ppc64le/binary">binary</a></td>
   </tr>
   <tr>
-    <td><a href="https://smm.ficsit.app/linux/ppc64le/deb">deb</a></td>
+    <td><a href="https://cli.ficsit.app/linux/ppc64le/deb">deb</a></td>
   </tr>
   <tr>
-    <td><a href="https://smm.ficsit.app/linux/ppc64le/rpm">rpm</a></td>
+    <td><a href="https://cli.ficsit.app/linux/ppc64le/rpm">rpm</a></td>
   </tr>
   <tr>
-    <td><a href="https://smm.ficsit.app/linux/ppc64le/apk">apk</a></td>
+    <td><a href="https://cli.ficsit.app/linux/ppc64le/apk">apk</a></td>
   </tr>
 </table>
