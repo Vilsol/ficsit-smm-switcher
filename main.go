@@ -1,9 +1,10 @@
 package main
 
 import (
+	"strings"
+
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
-	"strings"
 )
 
 var smm = map[string]map[string]string{
@@ -18,56 +19,56 @@ var smm = map[string]map[string]string{
 var cli = map[string]map[string]map[string]string{
 	"windows": {
 		"amd64": {
-			"binary": "https://github.com/Vilsol/ficsit-cli/releases/latest/download/ficsit_windows_amd64.exe",
+			"binary": "https://github.com/satisfactorymodding/ficsit-cli/releases/latest/download/ficsit_windows_amd64.exe",
 		},
 		"386": {
-			"binary": "https://github.com/Vilsol/ficsit-cli/releases/latest/download/ficsit_windows_386.exe",
+			"binary": "https://github.com/satisfactorymodding/ficsit-cli/releases/latest/download/ficsit_windows_386.exe",
 		},
 		"arm64": {
-			"binary": "https://github.com/Vilsol/ficsit-cli/releases/latest/download/ficsit_windows_arm64.exe",
+			"binary": "https://github.com/satisfactorymodding/ficsit-cli/releases/latest/download/ficsit_windows_arm64.exe",
 		},
 		"armv7": {
-			"binary": "https://github.com/Vilsol/ficsit-cli/releases/latest/download/ficsit_windows_armv7.exe",
+			"binary": "https://github.com/satisfactorymodding/ficsit-cli/releases/latest/download/ficsit_windows_armv7.exe",
 		},
 	},
 	"linux": {
 		"amd64": {
-			"binary": "https://github.com/Vilsol/ficsit-cli/releases/latest/download/ficsit_linux_amd64",
-			"deb":    "https://github.com/Vilsol/ficsit-cli/releases/latest/download/ficsit_linux_amd64.deb",
-			"rpm":    "https://github.com/Vilsol/ficsit-cli/releases/latest/download/ficsit_linux_amd64.rpm",
-			"apk":    "https://github.com/Vilsol/ficsit-cli/releases/latest/download/ficsit_linux_amd64.apk",
+			"binary": "https://github.com/satisfactorymodding/ficsit-cli/releases/latest/download/ficsit_linux_amd64",
+			"deb":    "https://github.com/satisfactorymodding/ficsit-cli/releases/latest/download/ficsit_linux_amd64.deb",
+			"rpm":    "https://github.com/satisfactorymodding/ficsit-cli/releases/latest/download/ficsit_linux_amd64.rpm",
+			"apk":    "https://github.com/satisfactorymodding/ficsit-cli/releases/latest/download/ficsit_linux_amd64.apk",
 		},
 		"386": {
-			"binary": "https://github.com/Vilsol/ficsit-cli/releases/latest/download/ficsit_linux_386",
-			"deb":    "https://github.com/Vilsol/ficsit-cli/releases/latest/download/ficsit_linux_386.deb",
-			"rpm":    "https://github.com/Vilsol/ficsit-cli/releases/latest/download/ficsit_linux_386.rpm",
-			"apk":    "https://github.com/Vilsol/ficsit-cli/releases/latest/download/ficsit_linux_386.apk",
+			"binary": "https://github.com/satisfactorymodding/ficsit-cli/releases/latest/download/ficsit_linux_386",
+			"deb":    "https://github.com/satisfactorymodding/ficsit-cli/releases/latest/download/ficsit_linux_386.deb",
+			"rpm":    "https://github.com/satisfactorymodding/ficsit-cli/releases/latest/download/ficsit_linux_386.rpm",
+			"apk":    "https://github.com/satisfactorymodding/ficsit-cli/releases/latest/download/ficsit_linux_386.apk",
 		},
 		"arm64": {
-			"binary": "https://github.com/Vilsol/ficsit-cli/releases/latest/download/ficsit_linux_arm64",
-			"deb":    "https://github.com/Vilsol/ficsit-cli/releases/latest/download/ficsit_linux_arm64.deb",
-			"rpm":    "https://github.com/Vilsol/ficsit-cli/releases/latest/download/ficsit_linux_arm64.rpm",
-			"apk":    "https://github.com/Vilsol/ficsit-cli/releases/latest/download/ficsit_linux_arm64.apk",
+			"binary": "https://github.com/satisfactorymodding/ficsit-cli/releases/latest/download/ficsit_linux_arm64",
+			"deb":    "https://github.com/satisfactorymodding/ficsit-cli/releases/latest/download/ficsit_linux_arm64.deb",
+			"rpm":    "https://github.com/satisfactorymodding/ficsit-cli/releases/latest/download/ficsit_linux_arm64.rpm",
+			"apk":    "https://github.com/satisfactorymodding/ficsit-cli/releases/latest/download/ficsit_linux_arm64.apk",
 		},
 		"armv7": {
-			"binary": "https://github.com/Vilsol/ficsit-cli/releases/latest/download/ficsit_linux_armv7",
-			"deb":    "https://github.com/Vilsol/ficsit-cli/releases/latest/download/ficsit_linux_armv7.deb",
-			"rpm":    "https://github.com/Vilsol/ficsit-cli/releases/latest/download/ficsit_linux_armv7.rpm",
-			"apk":    "https://github.com/Vilsol/ficsit-cli/releases/latest/download/ficsit_linux_armv7.apk",
+			"binary": "https://github.com/satisfactorymodding/ficsit-cli/releases/latest/download/ficsit_linux_armv7",
+			"deb":    "https://github.com/satisfactorymodding/ficsit-cli/releases/latest/download/ficsit_linux_armv7.deb",
+			"rpm":    "https://github.com/satisfactorymodding/ficsit-cli/releases/latest/download/ficsit_linux_armv7.rpm",
+			"apk":    "https://github.com/satisfactorymodding/ficsit-cli/releases/latest/download/ficsit_linux_armv7.apk",
 		},
 		"ppc64le": {
-			"binary": "https://github.com/Vilsol/ficsit-cli/releases/latest/download/ficsit_linux_ppc64le",
-			"deb":    "https://github.com/Vilsol/ficsit-cli/releases/latest/download/ficsit_linux_ppc64le.deb",
-			"rpm":    "https://github.com/Vilsol/ficsit-cli/releases/latest/download/ficsit_linux_ppc64le.rpm",
-			"apk":    "https://github.com/Vilsol/ficsit-cli/releases/latest/download/ficsit_linux_ppc64le.apk",
+			"binary": "https://github.com/satisfactorymodding/ficsit-cli/releases/latest/download/ficsit_linux_ppc64le",
+			"deb":    "https://github.com/satisfactorymodding/ficsit-cli/releases/latest/download/ficsit_linux_ppc64le.deb",
+			"rpm":    "https://github.com/satisfactorymodding/ficsit-cli/releases/latest/download/ficsit_linux_ppc64le.rpm",
+			"apk":    "https://github.com/satisfactorymodding/ficsit-cli/releases/latest/download/ficsit_linux_ppc64le.apk",
 		},
 	},
 	"darwin": {
 		"amd64": {
-			"binary": "https://github.com/Vilsol/ficsit-cli/releases/latest/download/ficsit_darwin_all",
+			"binary": "https://github.com/satisfactorymodding/ficsit-cli/releases/latest/download/ficsit_darwin_all",
 		},
 		"386": {
-			"binary": "https://github.com/Vilsol/ficsit-cli/releases/latest/download/ficsit_darwin_all",
+			"binary": "https://github.com/satisfactorymodding/ficsit-cli/releases/latest/download/ficsit_darwin_all",
 		},
 	},
 }
