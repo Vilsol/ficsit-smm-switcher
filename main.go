@@ -9,10 +9,13 @@ import (
 
 var smm = map[string]map[string]string{
 	"windows": {
-		"amd64": "https://github.com/satisfactorymodding/SatisfactoryModManager/releases/latest/download/Satisfactory-Mod-Manager-Setup.exe",
+		"amd64": "https://github.com/satisfactorymodding/SatisfactoryModManager/releases/latest/download/SatisfactoryModManager-Setup.exe",
 	},
 	"linux": {
-		"amd64": "https://github.com/satisfactorymodding/SatisfactoryModManager/releases/latest/download/Satisfactory-Mod-Manager.AppImage",
+		"amd64": "https://github.com/satisfactorymodding/SatisfactoryModManager/releases/latest/download/SatisfactoryModManager_linux_amd64.AppImage",
+	},
+	"darwin": {
+		"amd64": "https://github.com/satisfactorymodding/SatisfactoryModManager/releases/latest/download/SatisfactoryModManager_darwin_universal.zip",
 	},
 }
 
