@@ -15,9 +15,9 @@ https://smm.ficsit.app/:platform
 https://smm.ficsit.app/:platform/:arch
 ```
 
-|           | Windows                                      | Linux                                      |
-|-----------|----------------------------------------------|--------------------------------------------|
-| **amd64** | [link](https://smm.ficsit.app/windows/amd64) | [link](https://smm.ficsit.app/linux/amd64) |
+|           | Windows                                      | Linux                                      | Mac                                         |
+|-----------|----------------------------------------------|--------------------------------------------|---------------------------------------------|
+| **amd64** | [link](https://smm.ficsit.app/windows/amd64) | [link](https://smm.ficsit.app/linux/amd64) | [link](https://smm.ficsit.app/darwin/amd64) |
 
 ### CLI
 
