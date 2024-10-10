@@ -11,9 +11,12 @@ builds:
       - amd64
 
 archives:
-  - replacements:
-      linux: Linux
-      amd64: x86_64
+  - name_template: >-
+      {{ .ProjectName }}_
+      {{- title .Os }}_
+      {{- if eq .Arch "amd64" }}x86_64
+      {{- else }}{{ .Arch }}{{ end }}
+    allow_different_binary_count: true
 
 checksum:
   name_template: 'checksums.txt'
@@ -28,15 +31,15 @@ changelog:
       - '^docs:'
       - '^test:'
 
-dockers:
-  - image_templates:
-      - "ghcr.io/vilsol/ficsit-switcher:{{ .Tag }}"
-      - "ghcr.io/vilsol/ficsit-switcher:v{{ .Major }}"
-      - "ghcr.io/vilsol/ficsit-switcher:v{{ .Major }}.{{ .Minor }}"
-      - "ghcr.io/vilsol/ficsit-switcher:latest"
-    build_flag_templates:
-      - "--pull"
-      - "--label=org.opencontainers.image.created={{.Date}}"
-      - "--label=org.opencontainers.image.title={{.ProjectName}}"
-      - "--label=org.opencontainers.image.revision={{.FullCommit}}"
-      - "--label=org.opencontainers.image.version={{.Version}}"
+kos:
+  - repository: ghcr.io/satisfactorymodding/ficsit-switcher
+    tags:
+      - "{{ .Tag }}"
+      - "v{{ .Major }}"
+      - "v{{ .Major }}.{{ .Minor }}"
+      - "latest"
+    bare: true
+    platforms:
+      - linux/amd64
+      - linux/arm64
+      - linux/arm/v7
